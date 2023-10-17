@@ -43,9 +43,8 @@ public class Medallas {
             }
             
            // Calculo de los puntajes por pais
-           // Rolex no me salian las condiciones en el anuciado, hay que cambiar los valores
             for (int i = 0; i < 3; i++) {
-                sumaPais[i] = numeroOro[i] * 3 + numeroPlata[i] * 2 + numeroBronce[i];
+                sumaPais[i] = numeroOro[i] + numeroPlata[i] + numeroBronce[i];
             }
             
             // Calcular el país con mayor puntaje
