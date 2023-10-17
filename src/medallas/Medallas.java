@@ -43,8 +43,9 @@ public class Medallas {
             }
             
            // Calculo de los puntajes por pais
+           // Valor por Oro = 3; Valor por Plata = 2; Valor por Bronce = 1;
             for (int i = 0; i < 3; i++) {
-                sumaPais[i] = numeroOro[i] + numeroPlata[i] + numeroBronce[i];
+                sumaPais[i] = (numeroOro[i]*3) + (numeroPlata[i]*2) + numeroBronce[i];
             }
             
             // Calcular el país con mayor puntaje
