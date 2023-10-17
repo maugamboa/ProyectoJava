@@ -49,9 +49,15 @@ public class Medallas {
             
             // Calcular el país con mayor puntaje
             int indiceMaxPuntaje = 0;
+            boolean empate = false;
+
             for (int i = 1; i < 3; i++) {
                 if (sumaPais[i] > sumaPais[indiceMaxPuntaje]) {
                     indiceMaxPuntaje = i;
+                    empate = false;
+                }
+                else if (sumaPais[i] == sumaPais[indiceMaxPuntaje]) {
+                    empate = true;
                 }
             }
             
@@ -61,7 +67,11 @@ public class Medallas {
             }
             
            // Pais con mejores puntos
-            System.out.println("\nEl país que obtuvo mayor puntaje es: " + nombresPaises[indiceMaxPuntaje]+ "\n");
+            if (empate) {
+                System.out.println("\nHay un empate\n");
+            } else {
+                System.out.println("\nEl país que obtuvo mayor puntaje es: " + nombresPaises[indiceMaxPuntaje]+ "\n");
+            }
         }
     }
 }
